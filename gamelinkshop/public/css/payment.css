@@ -1,0 +1,117 @@
+
+main {
+    width: 100%;
+}
+
+/*#region Payment components*/
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: .5em;
+}
+
+.payment-container .payment-grid {
+    text-align: center;
+    margin: 1em;
+}
+
+.payment-container .payment-grid span {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 25px;
+    color: black;
+}
+
+.payment-container .payment-grid span::before {
+    content: "";
+    display: inline-block;
+    height: 0.1em;
+    vertical-align:super;
+    width: 30%;
+    margin-right: 20px;
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
+.payment-container .payment-grid span::after {
+    content: "";
+    display: inline-block;
+    height: 0.1em;
+    vertical-align:super;
+    width: 30%;
+    margin-left: 20px;
+    border-top: 2px solid rgb(0, 0, 0);
+}
+
+
+.payment-container .payment-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1em;
+    margin: 1em;
+}
+
+.payment-container .payment-group span {
+    color: black;
+}
+
+.payment-group span b{
+    color: black;
+}
+
+.payment-container .payment-group .cart-ref {
+
+    text-align: center;
+}
+
+
+/*#endregion*/
+
+/*#region Cart components*/
+
+.payment-container .cart-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 39em);
+    grid-auto-rows: minmax(150px, auto);
+}
+
+.payment-container .cart-content .cart-item {
+    position: relative;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    gap:1em;
+    border: 1px solid black;
+    padding: 2px;
+    height: 7em;
+    width: 35em;
+}
+
+.cart-content .cart-item img {
+    width: 10em;
+    height: 100%;
+}
+
+.cart-content .cart-item .cart-details {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    margin: 1em;
+}
+
+.cart-item .cart-details .game-title {
+    color:black;
+    font-weight: 600;
+    text-transform: uppercase;
+    width:7em;
+    word-wrap:break-word;
+}
+
+.cart-item .cart-details .game-value {
+    color:black;
+    text-align: center;
+    width: 6em;
+}
+
+/*#endregion*/

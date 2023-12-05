@@ -1,0 +1,73 @@
+
+.game-container {
+    margin: 0 5%;
+}
+
+.game-container .game-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-content img {
+    width: 30em;
+    height: 30em;
+    border: 3px solid rgba(77, 77, 255, 1);
+    border-radius: 15px;
+}
+
+.game-content .game-info {
+    margin: 2% 5%;
+}
+
+.game-info .game-inline {
+    margin-bottom: 25px;
+}
+
+
+.game-info .game-inline .game-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-right: 1.5em;
+    color: rgba(77, 77, 255, 1);
+    text-transform:uppercase;
+}
+
+.game-info .game-inline .game-publisher {
+    font-style: italic;
+}
+
+.game-info .game-inline hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
+}
+
+.game-info .game-inline .game-genre {
+    font-size: 13px;
+    margin-right: 5px;
+    padding: 3px;
+    background: rgb(77, 77, 255, 1);
+}
+
+.game-info .game-description {
+    text-indent: 50px;
+    margin-bottom: 30px;
+    padding: 1em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.game-info .game-block {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: grey;
+    width: fit-content;
+    border-radius: 12px;
+}
+
+.game-info .game-block .game-price {
+    margin: 0 20px;
+}

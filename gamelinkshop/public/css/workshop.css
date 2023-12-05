@@ -1,0 +1,87 @@
+.workshop-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    left: 10%;
+}
+
+.workshop-content .workshop-item {
+    width: 75%;
+    height: auto;
+    margin: 1em 0;
+    padding: 1em 1em;
+    border: 1px solid rgba(77, 77, 255, 1);
+    display: flex;
+    align-items: center;
+    gap: 4%;
+}
+
+.workshop-content .workshop-item img {
+    width: 20%;
+}
+
+.workshop-content .workshop-item .workshop-span {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.workshop-content .workshop-item .workshop-value {
+    font-size: 14px;
+}
+
+.workshop-content .workshop-item .game-title {
+    font-size: 20px;
+    width: 10em;
+    word-wrap:break-word;
+    text-align: center;
+}
+
+.workshop-content .workshop-item .game-genres {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.workshop-item .game-genres small {
+    background-color: rgba(77, 77, 255, 1);
+    padding: .3em;
+}
+
+.workshop-content .workshop-item  .workshop-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2px;
+}
+
+.game-popup {
+    display: block;
+    width: 40em;
+    height: auto;
+    background: rgba(77, 77, 255, 1);
+    border: 1px solid white;
+    border-radius: 5%;
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    text-align: center;
+    padding: 1em 1.5em;
+    padding-bottom: 1.5em;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.game-popup .form-container {
+    padding: 0 3em;
+}
+
+option {
+    color: black;
+}
+
+label {
+    font-weight: 600;
+}

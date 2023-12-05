@@ -1,0 +1,180 @@
+.navbar-brand img {
+    width: 70px;
+}
+/*#region LOGIN components*/
+.welcome-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 8%;
+}
+
+.welcome-content {
+    display: block;
+}
+
+.welcome-container .welcome-content .welcome-logo {
+    width: 45%;
+}
+
+.welcome-container .welcome-content .welcome-text {
+    color: white;
+    font-size: 2em;
+    font-style: italic;
+}
+
+.welcome-container .welcome-content .login-button {
+    background-color: rgba(77, 77, 255, 1);
+    border: 1px solid white;
+    border-radius: 12px;
+    color: white;
+    font-weight: 500;
+    padding: 16px 32px;
+    font-size: 20px;
+    margin-top: 2%;
+    cursor: pointer;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+}
+
+.welcome-container .welcome-content .login-button:hover {
+    background-color: rgb(18, 18, 99);
+    opacity: 0.9;
+}
+
+.login-popup {
+    display: block;
+    width: 25em;
+    height: auto;
+    background: rgba(77, 77, 255, 1);
+    border: 2px solid white;
+    border-radius: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    padding: 1em 1.5em;
+    padding-bottom: 2em;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, -50%);
+}
+
+.login-popup .form-container {
+    padding: 0 2em;
+}
+
+.btn-default {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 12px;
+    color: rgba(77, 77, 255, 1);
+    margin-top: 8px;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*#endregion*/
+
+/*#region REGISTER components*/
+.register-container {
+    margin: 3em 13em;
+}
+
+.register-content {
+    padding: 3em 4em;
+    margin: 0 15em;
+    border-radius: 15px;
+    border: .1em solid rgba(77, 77, 255, 1);
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.register-content h3 {
+    color: white;
+    font-weight: 600;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.register-content h3::before {
+    content: "";
+    display: inline-block;
+    height: 0.1em;
+    vertical-align: bottom;
+    width: 30%;
+    border-top: 1px solid rgb(155, 155, 155);
+}
+
+.register-content h3::after {
+    content: "";
+    display: inline-block;
+    height: 0.1em;
+    vertical-align: bottom;
+    width: 30%;
+    border-top: 1px solid rgb(155, 155, 155);
+}
+
+.register-content .register-option {
+    display: flex;
+    justify-content: center;
+}
+
+.register-option .form-check {
+    background:rgba(77, 77, 255, 1);
+    border-radius: 12px;
+    padding: .5em 0;
+    padding-right: .7em;
+    padding-left: 2em;
+    margin: 2%;
+    accent-color: rgb(0, 255, 34);;
+}
+
+.register-content .register-grid {
+    background: rgba(77, 77, 255, 1);
+    border-radius: 10px;
+    margin-bottom: 2%;
+    padding: 1em 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.register-content  label {
+    color: white;
+    font-weight: 600;
+}
+
+.register-content .form-control {
+    border-radius: 10px;
+}
+
+
+.success-container {
+    position: relative;
+    display: block;
+    justify-content: center;
+    margin: 150px;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.success-container img {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.success-container button {
+    margin-top: 40px;
+}
+
+/*#endregion*/
