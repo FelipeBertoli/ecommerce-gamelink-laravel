@@ -4,7 +4,7 @@
     @endsection
     <!-- #region MAIN-->
     @section('main')
-    <main>
+
             <div class="main-grid">
                 <h1 class="main-title">BIBLIOTECA</h1>
             </div>
@@ -14,8 +14,8 @@
                 <div class="game-grid">
                 @foreach($libraryGames as $libraryGame)
                 
-                    <a class="game-card" href="{{ $libraryGame->game->game_link}}" target="_blank"><img src="{{ $libraryGame->game->game_image }}" alt="" class="game-img"><span class="game-title">{{ $libraryGame->game->game_name }}</span></a>
+                    <a class="game-card" href="{{ route('game', ['id' => $libraryGame->game_id]) }}"><img src="{{ $libraryGame->game->game_image }}" alt="" class="game-img"><span class="game-title">{{ $libraryGame->game->game_name }}</span></a>
                 @endforeach
             </div>
-    </main>
+
     @endsection

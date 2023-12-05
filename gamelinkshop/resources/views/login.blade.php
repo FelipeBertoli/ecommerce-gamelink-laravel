@@ -16,7 +16,7 @@
             <a class="navbar-brand" href="#"><img src="./img/tinylogo.png" alt=""></a>
         </nav>
     </header>
-    <div class="welcome-container">
+    <div class="welcome-container pt-5">
         <div class="welcome-content">
             <img class="welcome-logo" src="img/biglogo.png">
 

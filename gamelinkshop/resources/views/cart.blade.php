@@ -25,7 +25,7 @@
 
                     <div class="cart-details">
                         <span class="game-title">{{$cartGame->game->game_name}}</span>
-                        <span class="game-value">{{$cartGame->game->price}}</span>
+                        <span class="game-value">R$ {{$cartGame->game->price}}</span>
                         <button class="btn-trash"><i class="fi fi-br-trash"></i></button>
                     </div>
                 </div>
@@ -43,7 +43,7 @@
                 <span class="border p-5"><b>API DE PAGAMENTO AQUI</b></span>
             </div>
             <div class="payment-group">
-                <span>Quantidade total: <b>{{$cart->totalItens}}</b></span>
+                <span>Quantidade total de itens: <b>{{$cart->totalItens}}</b></span>
                 <span>Valor total: <b>{{$cart->price}}</b></span>
             </div>
 

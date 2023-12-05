@@ -37,7 +37,15 @@
 
                 <ul class="navbar-nav mt-2 mt-lg-0" style="display: flex; align-items: center;">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('cart')}}"><i class="fi fi-br-shopping-cart"></i></a>
+                        <a class="nav-link" href="{{route('cart')}}"><i class="fi fi-br-shopping-cart"></i>
+                        @if(auth()->user()->cart->totalItens != 0) 
+                        <span class="cart-itens">{{auth()->user()->cart->totalItens}}</span>
+                        @endif
+                        @if(auth()->user()->cart->totalItens == 0) 
+                        <span class="cart-itens-disabled">0</span>
+                        @endif
+                    </a>
+                        
                     </li>
 
                     <div class="dropdown show">

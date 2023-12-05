@@ -73,7 +73,7 @@
                             <span class="game-price">R$ {{ $game->price }}</span>
                             <div class="game-info">
                                 <h3 class="game-title">{{ $game->game_name }}</h3>
-                                <span class="game-publisher">{{ $game->users->username }}</span>
+                                <span class="game-publisher">{{ $game->author->username }}</span>
                                 <label class="game-genre">{{ $game->genre_1->genre_name }}</label>
                                 @if (!is_null($game->genre_2))
                                 <label class="game-genre">{{ $game->genre_2->genre_name }}</label>
@@ -87,6 +87,53 @@
                     <span onclick="slideLeft()" class="arrow-btn"></span>
                 </div>
             </div>
+
+            @foreach($genres as $genre)
+            <div class="store-content">
+                <div class="store-subtitle">
+                    <h5>{{ $genre->genre_name}}</h5>
+                </div>
+                <div id="game-container">
+                    <span onclick="slideRight()" class="arrow-btn"></span>
+                    <div id="game-slider">
+                        @foreach($genre->games as $game)
+                        <a class="game-card" href="{{ route('game', ['id' => $game->id]) }}">
+                            <img src="{{ $game-> game_image }}" alt="" class="game-img">
+                            <span class="game-price">R$ {{ $game->price }}</span>
+                            <div class="game-info">
+                                <h3 class="game-title">{{ $game->game_name }}</h3>
+                                <span class="game-publisher">{{ $game->author->username }}</span>
+                                <label class="game-genre">{{ $game->genre_1->genre_name }}</label>
+                                @if (!is_null($game->genre_2))
+                                <label class="game-genre">{{ $game->genre_2->genre_name }}</label>
+                                @endif
+                                
+                                <p class="game-description">{{ $game->description }}</p>
+                            </div>
+                        </a>
+                        @endforeach
+
+                        @foreach($genre->gamesSecondGenre as $game)
+                        <a class="game-card" href="{{ route('game', ['id' => $game->id]) }}">
+                            <img src="{{ $game-> game_image }}" alt="" class="game-img">
+                            <span class="game-price">R$ {{ $game->price }}</span>
+                            <div class="game-info">
+                                <h3 class="game-title">{{ $game->game_name }}</h3>
+                                <span class="game-publisher">{{ $game->author->username }}</span>
+                                <label class="game-genre">{{ $game->genre_1->genre_name }}</label>
+                                @if (!is_null($game->genre_2))
+                                <label class="game-genre">{{ $game->genre_2->genre_name }}</label>
+                                @endif
+                                
+                                <p class="game-description">{{ $game->description }}</p>
+                            </div>
+                        </a>
+                        @endforeach
+                    </div>
+                    <span onclick="slideLeft()" class="arrow-btn"></span>
+                </div>
+            </div>
+            @endforeach
             <!-- #endregion -->
         </div>
     @endsection

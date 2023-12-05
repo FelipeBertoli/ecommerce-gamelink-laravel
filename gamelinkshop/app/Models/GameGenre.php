@@ -19,4 +19,13 @@ class GameGenre extends Model
         'id',
         'genre_name',
     ];
+
+    public function games() {
+        return $this->hasMany(Game::class, 'genre_id');
+    }
+
+    public function gamesSecondGenre()
+    {
+        return $this->hasMany(Game::class, 'genre_id_2');
+    }
 }

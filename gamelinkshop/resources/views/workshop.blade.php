@@ -4,7 +4,6 @@
 @endsection
 <!-- #region MAIN-->
 @section('main')
-<main>
     <div class="main-grid">
         <h1 class="main-title mr-auto">WORKSHOP</h1>
         <button class="btn btn-add" id="btn-add"><span>+</span>Adicionar jogo</button>
@@ -51,6 +50,5 @@
             <button class="btn btn-trash" id="btn-trash"><i class="fi fi-br-trash"></i></button>
         </div>
     </div>
-</main>
 <script src="../../js/game.js"></script>
 @endsection

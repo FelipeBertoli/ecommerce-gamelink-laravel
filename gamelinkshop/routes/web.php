@@ -32,9 +32,7 @@ Route::get('register-confirmation', function() {
     return view('register-confirmation');
 })->name('register-confirmation');
 
-
 Route::get('store', [GameController::class, 'getGames'])->name('store');
-
 
 Route::get('game/{id}', [GameController::class, 'gamePage'])->name('game');
 Route::post('game/1', [GameController::class, 'saveCart'])->name('game.post');

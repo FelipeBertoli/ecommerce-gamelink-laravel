@@ -17,7 +17,7 @@
         </nav>
     </header>
 
-    <div class="register-container">
+    <div class="register-container pt-5">
         <div class="register-content">
             <h3>PREENCHA SEUS DADOS</h3>
             <form class="needs-validation" action="{{route('register.post')}}" method="POST">

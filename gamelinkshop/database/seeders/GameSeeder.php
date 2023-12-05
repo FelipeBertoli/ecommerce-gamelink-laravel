@@ -76,7 +76,7 @@ class GameSeeder extends Seeder
         Game::create([
             'game_name' => 'The Cave',
             'description' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-            'genre_id' => 4,
+            'genre_id' => 3,
             'genre_id_2' => 5,
             'sold_quatity' => 0,
             'price' => 15.15,
@@ -117,7 +117,7 @@ class GameSeeder extends Seeder
             'sold_quatity' => 0,
             'price' => 7.00,
             'game_image' => '../../img/games/m-asteroids.PNG',
-            'author_id' => 8,
+            'author_id' => 9,
             'game_link' => 'https://www.greenfoot.org/scenarios/31230'
         ]);
 
@@ -129,7 +129,7 @@ class GameSeeder extends Seeder
             'sold_quatity' => 0,
             'price' => 10.39,
             'game_image' => '../../img/games/cosmic-combat.PNG',
-            'author_id' => 9,
+            'author_id' => 8,
             'game_link' => 'https://www.greenfoot.org/scenarios/31218'
         ]);
 

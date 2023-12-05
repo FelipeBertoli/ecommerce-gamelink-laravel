@@ -7,7 +7,7 @@ use App\Models\Game;
 use App\Models\GameCart;
 use App\Models\Library;
 use App\Models\LibraryGame;
-use App\Models\User;
+use App\Models\GameGenre;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -15,9 +15,11 @@ class GameController extends Controller
 {
     function getGames()
     {
-        $games = Game::with('users', 'genre_1', 'genre_2')->get();
+        $games = Game::with('author', 'genre_1', 'genre_2')->get();
+        $genres = GameGenre::with('games', 'gamesSecondGenre', 'games.author')->get();
 
-        return view('store', compact('games'));
+
+        return view('store', compact('games', 'genres'));
     }
 
     function gamePage($id)
@@ -25,7 +27,9 @@ class GameController extends Controller
         $game = Game::find($id);
         $user = auth()->user();
         $cart = $user->cart;
-        return view('game', compact('game', 'cart'));
+        $userHasGame = false;
+        $userHasGame = $user->library->libraryGames->contains('game_id', $id);
+        return view('game', compact('game', 'cart', 'userHasGame'));
     }
 
     function saveCart(Request $request)
@@ -69,17 +73,24 @@ class GameController extends Controller
 
         $gameIds = $request->input('game_id');
         $libraryIds = $request->input('library_id');
-        
+
         foreach ($gameIds as $index => $gameId) {
             $libraryId = $libraryIds[$index];
-            
-            // Aqui você pode salvar os dados como necessário usando $gameId e $libraryId
-            // Exemplo de como poderia ser utilizado:
+
             LibraryGame::create([
                 'game_id' => $gameId,
                 'library_id' => $libraryId,
                 'cart_id' => $request->input('cart_id'),
             ]);
+
+            $user = auth()->user();
+            $cart = $user->cart;
+            $cartId = $cart->id;
+            GameCart::where('cart_id', $cartId)->delete();
+            $cart->totalItens = 0;
+            $cart->price = 0;
+
+            $cart->save();
         }
 
 
@@ -94,4 +105,5 @@ class GameController extends Controller
 
         return view('library', compact('libraryGames', 'library', 'user'));
     }
+
 }

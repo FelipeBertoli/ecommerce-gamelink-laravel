@@ -28,7 +28,7 @@ class Game extends Model
         'game_link'
     ];
 
-    public function users()
+    public function author()
     {
         return $this->belongsTo(User::class, 'author_id');
     }
